@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
 
+
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,14 +78,15 @@ TEMPLATES = [
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
+                "django.template.context_processors.debug",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "django.contrib.messages.context_processors.debug",
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = "config.wsgi.application"
 
